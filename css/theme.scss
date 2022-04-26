@@ -23,13 +23,16 @@ $color-x11-white: #fff;
 
 
 $dark-theme: true !default;
-$background-color: #111;
+$background-color: #000;
 $text-color-primary: #eee;
+$text-color-inverse: #000;
 $text-color-darker: #aaa;
 $text-color-darkest: #777;
 $text-color-highlight-background: $text-color-primary;
 $text-color-highlight-foreground: $background-color;
 $text-color-emphasis: $color-x11-fuchsia;
+$border-color-primary: #777;
+$border-color-darker: #555;
 
 $link-color-primary: $color-x11-aqua;
 $link-color-visited: $color-x11-aqua;
@@ -64,6 +67,7 @@ body {
   background-color: $background-color;
   color: $text-color-primary;
   text-rendering: optimizeSpeed;
+  scroll-behavior: auto;
 }
 
 img {
@@ -74,18 +78,20 @@ a {
   text-decoration: none;
   &:link {
     color: $link-color-primary;
-    transition: color 0.5s;
+    transition: color 0.5s ease;
+  }
+
+
+  &:visited {
+    color: $link-color-visited;
+    text-decoration: underline;
+    transition: color 0.5s ease;
   }
 
   &:hover {
     color: $link-color-active;
     text-decoration: underline;
-    transition: color 0.5s;
-  }
-
-  &:visited {
-    color: $link-color-visited;
-    text-decoration: underline;
+    transition: color 0.5s ease;
   }
 
   &:active {
@@ -114,9 +120,30 @@ h3 {
 p {
   max-width: 84ch;
   line-height: 1.2em;
+}
 
-  &:last-child {
-    @include fx-cursor-blink;
+
+/* layout-specific */
+
+header h1 a {
+  &:link, &:visited, &:active {
+    color: $text-color-primary;
+    transition: color 0.5s;
+  }
+  &:hover {
+    color: $link-color-primary;
+    transition: color 0.5s;
+    text-decoration: none;
+  }
+}
+
+#headingFrame {
+  #headingMask {
+    h2{
+      @include Font_DOSV_JPN30();
+      font-size: 300%;
+      color: $text-color-primary;
+    }
   }
 }
 
