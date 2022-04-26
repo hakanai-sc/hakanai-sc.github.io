@@ -1,0 +1,81 @@
+/*
+  Fonts from https://int10h.org/oldschool-pc-fonts/fontlist/?1
+*/
+
+@mixin Font_Normalize {
+  font-smooth: never;
+  -webkit-font-smoothing: none;
+  letter-spacing: 0;
+  font-weight: 400;
+  font-style: normal;
+  font-variant-caps: normal;
+  word-spacing: normal;
+}
+
+@mixin Font_DOSV_JPN12 {
+  @include Font_Normalize();
+  font-family: 'DOS/V re. JPN12', 'DotGothic16', "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",Osaka, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  font-size: 12px;
+  line-height: 12px;
+}
+
+@mixin Font_DOSV_JPN16 {
+  @include Font_Normalize();
+  font-family: 'DOS/V re. JPN16', "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",Osaka, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  font-size: 16px;
+  line-height: 16px;
+}
+
+@mixin Font_DOSV_JPN19 {
+  @include Font_Normalize();
+  font-family: 'DOS/V re. JPN19', "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",Osaka, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  height: 19px;
+  line-height: 19px;
+}
+
+@mixin Font_DOSV_JPN24 {
+  @include Font_Normalize();
+  font-family: 'DOS/V re. JPN24', "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",Osaka, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  font-size: 24px;
+  line-height: 24px;
+}
+
+@mixin Font_DOSV_JPN30 {
+  @include Font_Normalize();
+  font-family: 'DOS/V re. JPN30', "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",Osaka, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  font-size: 30px;
+  line-height: 30px;
+}
+
+
+/* font declarations */
+
+@font-face {
+  font-family: 'DotGothic16';
+  src: url('./fonts/DotGothic16-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'DOS/V re. JPN12';
+  src: url('./fonts/Web437_DOS-V_re_JPN12.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'DOS/V re. JPN16';
+  src: url('./fonts/Web437_DOS-V_re_JPN16.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'DOS/V re. JPN19';
+  src: url('./fonts/Web437_DOS-V_re_JPN19.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'DOS/V re. JPN24';
+  src: url('./fonts/Web437_DOS-V_re_JPN24.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'DOS/V re. JPN30';
+  src: url('./fonts/Web437_DOS-V_re_JPN30.woff') format('woff');
+}

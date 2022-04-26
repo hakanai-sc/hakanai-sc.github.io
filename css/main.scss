@@ -1,0 +1,28 @@
+/**
+ *  style.scss
+ *  web page primary styles because who writes regular css in 2022
+ */
+
+ @import "util.scss";
+ @import "typography.scss";
+ @import "theme.scss";
+
+ @media only screen and (max-width: 576px) {
+   @import "./responsive/mobile.scss";
+ }
+
+ @media only screen and (min-width: 576px) and (max-width: 768px) {
+   @import "./responsive/tablet.scss";
+ }
+
+ @media only screen and (min-width: 769px) and (max-width: 992px) {
+   @import "./responsive/laptop.scss";
+ }
+
+ @media only screen and (min-width: 992px) {
+  @import "./responsive/desktop.scss";
+ }
+
+ @media only print {
+  @import "./responsive/print.scss";
+ }

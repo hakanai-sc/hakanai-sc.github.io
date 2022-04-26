@@ -1,0 +1,4 @@
+# disallow alexa
+User-agent: ia_archiver
+Disallow: /
+

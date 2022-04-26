@@ -1,0 +1,122 @@
+/* Core Theming */
+
+/*
+  x11 16-colors - https://www.ditig.com/256-colors-cheat-sheet
+  here is a place i am willing to break the rules
+*/
+$color-x11-black: #000;
+$color-x11-maroon: #800000;
+$color-x11-green: #008000;
+$color-x11-olive: #808000;
+$color-x11-navy: #000080;
+$color-x11-purple: #800080;
+$color-x11-teal: #008080;
+$color-x11-silver: #c0c0c0;
+$color-x11-gray: #808080;
+$color-x11-red: #f00;
+$color-x11-lime: #00ff00;
+$color-x11-yellow: #ff0;
+$color-x11-blue: #00f;
+$color-x11-fuchsia: #f0f;
+$color-x11-aqua: #0ff;
+$color-x11-white: #fff;
+
+
+$dark-theme: true !default;
+$background-color: #111;
+$text-color-primary: #eee;
+$text-color-darker: #aaa;
+$text-color-darkest: #777;
+$text-color-highlight-background: $text-color-primary;
+$text-color-highlight-foreground: $background-color;
+$text-color-emphasis: $color-x11-fuchsia;
+
+$link-color-primary: $color-x11-aqua;
+$link-color-visited: $color-x11-aqua;
+$link-color-active: $color-x11-fuchsia;
+
+::-moz-selection {
+  background: $text-color-highlight-background;
+  color: $text-color-highlight-foreground;
+}
+
+::selection {
+  background: $text-color-highlight-background;
+  color: $text-color-highlight-foreground;
+}
+
+/* CSS FX By PvADER */
+@mixin fx-cursor-blink {
+  &::after {
+    content: "▓";
+    animation: cursor-blink 1.5s steps(2) infinite;
+  }
+}
+
+@keyframes cursor-blink {
+  0% {
+    opacity: 0;
+  }
+}
+
+body {
+  @include Font_DOSV_JPN24;
+  background-color: $background-color;
+  color: $text-color-primary;
+  text-rendering: optimizeSpeed;
+}
+
+img {
+  image-rendering: pixelated;
+}
+
+a {
+  text-decoration: none;
+  &:link {
+    color: $link-color-primary;
+    transition: color 0.5s;
+  }
+
+  &:hover {
+    color: $link-color-active;
+    text-decoration: underline;
+    transition: color 0.5s;
+  }
+
+  &:visited {
+    color: $link-color-visited;
+    text-decoration: underline;
+  }
+
+  &:active {
+    color: $link-color-active;
+  }
+}
+
+/* headings */
+
+h2 {
+  @include Font_DOSV_JPN16;
+  color: $text-color-darker;
+  margin: 2em 0 1em 0;
+  font-size: 32px;
+}
+
+h3 {
+  @include Font_DOSV_JPN12;
+  color: $text-color-darker;
+  margin: 2em 0 1em 0;
+  font-size: 24px;
+}
+
+
+/* body copy */
+p {
+  max-width: 84ch;
+  line-height: 1.2em;
+
+  &:last-child {
+    @include fx-cursor-blink;
+  }
+}
+
