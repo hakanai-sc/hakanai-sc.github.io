@@ -23,20 +23,20 @@ $color-x11-white: #fff;
 
 
 $dark-theme: true !default;
-$background-color: #000;
+$background-color: rgb(34, 34, 34);
 $text-color-primary: #eee;
 $text-color-inverse: #000;
 $text-color-darker: #aaa;
 $text-color-darkest: #777;
 $text-color-highlight-background: $text-color-primary;
 $text-color-highlight-foreground: $background-color;
-$text-color-emphasis: $color-x11-fuchsia;
+$text-color-emphasis: rgb(255, 205, 144);
 $border-color-primary: #777;
 $border-color-darker: #555;
 
-$link-color-primary: $color-x11-aqua;
+$link-color-primary: rgb(0, 174, 255);
 $link-color-visited: $color-x11-aqua;
-$link-color-active: $color-x11-fuchsia;
+$link-color-active: $text-color-emphasis;
 
 ::-moz-selection {
   background: $text-color-highlight-background;
@@ -103,14 +103,14 @@ a {
 
 h2 {
   @include Font_DOSV_JPN16;
-  color: $text-color-darker;
+  color: $text-color-emphasis;
   margin: 2em 0 1em 0;
   font-size: 32px;
 }
 
 h3 {
   @include Font_DOSV_JPN12;
-  color: $text-color-darker;
+  color: $text-color-emphasis;
   margin: 2em 0 1em 0;
   font-size: 24px;
 }
@@ -118,7 +118,7 @@ h3 {
 
 /* body copy */
 p {
-  max-width: 84ch;
+  max-width: 80ch;
   line-height: 1.2em;
 }
 
@@ -143,7 +143,55 @@ header h1 a {
       @include Font_DOSV_JPN30();
       font-size: 300%;
       color: $text-color-primary;
+
+      &.inverse {
+        color: $text-color-inverse;
+      }
     }
   }
 }
+
+hr {
+  margin: 1rem 0;
+  border: none;
+  background-color: $text-color-darker;
+  box-shadow: 0 1px 1px rgba(30, 30, 30, 0.8);
+  height: 1px;
+}
+
+.imageContainer, .videoContainer {
+  margin: 2em auto;
+  img {
+    display: block;
+    margin: 0 auto 1em auto;
+    text-align: center;
+    width: 100%;
+  }
+  p.caption {
+    &:last-child::after {
+      content: "" !important;
+    }
+    @include Font_DOSV_JPN16;
+    max-width: none;
+    color: $text-color-emphasis;
+    width: 100%;
+    line-height: 0;
+    text-align: center;
+  }
+}
+
+.videoContainer {
+  .videoInner {
+    position: relative;
+    padding-top: 56.25%;
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
 
