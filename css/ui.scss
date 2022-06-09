@@ -103,6 +103,43 @@ header {
   }
 }
 
+#preFooter {
+  @include Font_DOSV_JPN16;
+  margin: 2em 0;
+  border-top: 1px solid $border-color-darker;
+  padding-top: 2em;
+  overflow: hidden;
+
+  #sharePanel {
+    width: 30%;
+    float: left;
+  }
+
+  #backToTop {
+    float: right;
+  }
+}
+
+#sharePanel {
+  margin: 0;
+  padding: 0;
+  width: 50%;
+  h4 {
+    margin: 0;
+    padding: 0;
+    float: left;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  li {
+    list-style-type: none;
+    padding-left: 1em;
+  }
+}
+
 main {
   @include set-maxwidth();
 

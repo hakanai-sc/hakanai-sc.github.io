@@ -19,10 +19,10 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.scss">
 
-  <meta name="theme-color" content="#fafafa">
+  <meta name="theme-color" content="#222222">
 </head>
 
-<body>
+<body id="top">
 
   <!-- ui controls to make -->
 
@@ -85,17 +85,25 @@
     <p>More stuff.</p>
   </div>
 
-
-
-  </main>
-
-
   <!-- download link -->
 
   <!-- github link -->
 
+  <div id="preFooter">
   <!-- sharing link -->
-
+    <div id="sharePanel" data-mediatype="article">
+      <h4>Share To:</h4>
+      <ul>
+        <li><a id="shareFacebook" href="https://www.facebook.com/sharer/sharer.php?u=$ESCAPED_URI">Facebook</a></li>
+        <li><a id="shareTwitter" href="https://twitter.com/intent/tweet?url=$ESCAPED_URI&text=$POST_TITLE&via=twitter">Twitter</a></li>
+        <li><a id="shareTumblr" href="http://tumblr.com/share?s=&v=3&t=$POST_TITLE&u=$ESCAPED_URI">Tumblr</a></li>
+        <li><a id="shareReddit" href="http://www.reddit.com/submit?url=$ESCAPED_URI&title=$POST_TITLE">Reddit</a></li>
+      </ul>
+    </div>
+    <!-- back to top -->
+    <a id="backToTop" href="#top">Back To Top</a>
+  </div>
+  </main>
 
   <!-- footer-->
   <footer>

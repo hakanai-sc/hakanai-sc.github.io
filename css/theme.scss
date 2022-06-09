@@ -35,7 +35,7 @@ $border-color-primary: #777;
 $border-color-darker: #555;
 
 $link-color-primary: rgb(0, 174, 255);
-$link-color-visited: $color-x11-aqua;
+$link-color-visited: $text-color-emphasis;
 $link-color-active: $text-color-emphasis;
 
 ::-moz-selection {
@@ -177,6 +177,25 @@ hr {
     width: 100%;
     line-height: 0;
     text-align: center;
+  }
+}
+
+#preFooter {
+  border-color: $border-color-darker;
+}
+
+#sharePanel {
+  h4 {
+    color: $text-color-emphasis;
+  }
+}
+
+#backToTop {
+  &:visited {
+    color: $link-color-primary;
+  }
+  &:hover {
+    color: $link-color-active;
   }
 }
 
