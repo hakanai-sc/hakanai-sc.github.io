@@ -188,6 +188,12 @@ hr {
   h4 {
     color: $text-color-emphasis;
   }
+  a:link, a:visited {
+    color: $link-color-primary;
+  }
+  a:hover {
+    color: $link-color-active;
+  }
 }
 
 #backToTop {
